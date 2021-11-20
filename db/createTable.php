@@ -1,7 +1,5 @@
 <?php
-$data = json_decode(file_get_contents("php://input"), true);
-$roads = $data['roads'];
-$districts = $data['districts'];
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -23,7 +21,7 @@ name VARCHAR(30) NOT NULL,
 email VARCHAR(100) NOT NULL,
 phone VARCHAR(50) NOT NULL,
 feedback TEXT NOT NULL,
-status INT(4) NOT NULL,
+status INT(4) NOT NULL DEFAULT(1) ,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 

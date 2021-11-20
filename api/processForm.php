@@ -5,7 +5,7 @@ $name = $data['name'];
 $phone = $data['phone'];
 $email = $data['email'];
 $feedback = $data['feedback'];
-$status = 1;
+
 
 $servername = "localhost";
 $username = "root";
@@ -16,7 +16,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "INSERT INTO feedbacks (name,phone,email,feedback,status) VALUES ('$name','$phone','$email', '$feedback','$status')";
+$sql = "INSERT INTO feedbacks (name,phone,email,feedback) VALUES ('$name','$phone','$email', '$feedback')";
 
 
 // config response data kiểu json
